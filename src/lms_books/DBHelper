@@ -1,0 +1,112 @@
+package lms_books;
+
+import java.sql.*;
+
+/**
+ * DBHelper class to manage database interactions for the Library Management System.
+ */
+public class DBHelper {
+
+    private static final String DB_URL = "jdbc:sqlite:lms_books.db";
+
+    // Method to connect to the database
+    public static Connection connect() {
+        Connection conn = null;
+        try {
+            conn = DriverManager.getConnection(DB_URL);
+            System.out.println("Connected to the SQLite database.");
+        } catch (SQLException e) {
+            System.out.println("Database connection failed: " + e.getMessage());
+        }
+        return conn;
+    }
+
+    // Method to create the 'books' table
+    public static void createTable() {
+        String sql = """
+                CREATE TABLE IF NOT EXISTS books (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    title TEXT NOT NULL,
+                    author TEXT NOT NULL,
+                    genre TEXT,
+                    status TEXT NOT NULL DEFAULT 'Available'
+                );
+                """;
+
+        try (Connection conn = connect();
+             Statement stmt = conn.createStatement()) {
+            stmt.execute(sql);
+            System.out.println("Table 'books' created (or already exists).");
+        } catch (SQLException e) {
+            System.out.println("Error creating table: " + e.getMessage());
+        }
+    }
+
+    // Method to insert a book into the database
+    public static void addBook(String title, String author, String genre) {
+        String sql = "INSERT INTO books (title, author, genre) VALUES (?, ?, ?)";
+        try (Connection conn = connect();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, title);
+            pstmt.setString(2, author);
+            pstmt.setString(3, genre);
+            pstmt.executeUpdate();
+            System.out.println("Book added: " + title);
+        } catch (SQLException e) {
+            System.out.println("Error adding book: " + e.getMessage());
+        }
+    }
+
+    // Method to remove a book by title
+    public static void removeBook(String title) {
+        String sql = "DELETE FROM books WHERE title = ?";
+        try (Connection conn = connect();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, title);
+            int rowsAffected = pstmt.executeUpdate();
+            if (rowsAffected > 0) {
+                System.out.println("Book removed: " + title);
+            } else {
+                System.out.println("No book found with title: " + title);
+            }
+        } catch (SQLException e) {
+            System.out.println("Error removing book: " + e.getMessage());
+        }
+    }
+
+    // Method to display all books in the database
+    public static void displayBooks() {
+        String sql = "SELECT * FROM books";
+        try (Connection conn = connect();
+             Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery(sql)) {
+
+            System.out.println("Books in the library:");
+            while (rs.next()) {
+                System.out.printf("ID: %d, Title: %s, Author: %s, Genre: %s, Status: %s%n",
+                        rs.getInt("id"), rs.getString("title"), rs.getString("author"),
+                        rs.getString("genre"), rs.getString("status"));
+            }
+        } catch (SQLException e) {
+            System.out.println("Error displaying books: " + e.getMessage());
+        }
+    }
+
+    // Method to update the status of a book (e.g., Check Out or Available)
+    public static void updateBookStatus(String title, String status) {
+        String sql = "UPDATE books SET status = ? WHERE title = ?";
+        try (Connection conn = connect();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, status);
+            pstmt.setString(2, title);
+            int rowsAffected = pstmt.executeUpdate();
+            if (rowsAffected > 0) {
+                System.out.println("Book status updated: " + title + " is now " + status);
+            } else {
+                System.out.println("No book found with title: " + title);
+            }
+        } catch (SQLException e) {
+            System.out.println("Error updating book status: " + e.getMessage());
+        }
+    }
+}

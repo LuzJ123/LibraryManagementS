@@ -1,0 +1,2 @@
+Main-Class: lms_books.LibraryApp
+Main-Class: PrimeServer

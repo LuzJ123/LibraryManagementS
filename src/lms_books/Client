@@ -1,0 +1,34 @@
+package lms_books;
+
+import java.io.*;
+import java.net.*;
+import javafx.application.Application;
+import javafx.stage.Stage;
+import javafx.scene.Scene;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.BorderPane;
+
+/**
+ * Client class to interact with the library server.
+ */
+public class Client {
+
+    public static void main(String[] args) {
+        try (Socket socket = new Socket("localhost", 8000);
+             DataInputStream input = new DataInputStream(socket.getInputStream());
+             DataOutputStream output = new DataOutputStream(socket.getOutputStream())) {
+
+            System.out.println("Connected to Library Server");
+
+            // Example interaction
+            output.writeUTF("PING");
+            String response = input.readUTF();
+            System.out.println("Server Response: " + response);
+
+        } catch (IOException e) {
+            System.out.println("Client error: " + e.getMessage());
+        }
+    }
+}

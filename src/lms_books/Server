@@ -1,0 +1,52 @@
+package lms_books;
+
+import javafx.application.Application;
+import javafx.stage.Stage;
+import javafx.scene.Scene;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.BorderPane;
+import java.io.*;
+import java.net.*;
+import java.util.Date;
+
+/**
+ * Server class to handle library management requests.
+ */
+public class Server {
+
+    public static void main(String[] args) {
+        try (ServerSocket serverSocket = new ServerSocket(8000)) {
+            System.out.println("Library Server started at " + new Date());
+
+            while (true) {
+                Socket socket = serverSocket.accept();
+                System.out.println("Client connected: " + socket.getInetAddress());
+
+                new Thread(() -> {
+                    try (DataInputStream input = new DataInputStream(socket.getInputStream());
+                         DataOutputStream output = new DataOutputStream(socket.getOutputStream())) {
+
+                        while (true) {
+                            String request = input.readUTF(); // Receive request
+                            System.out.println("Received: " + request);
+
+                            // Handle book-related requests (example: add, checkout, etc.)
+                            if (request.equalsIgnoreCase("PING")) {
+                                output.writeUTF("PONG");
+                            } else {
+                                output.writeUTF("Invalid request");
+                            }
+                        }
+
+                    } catch (IOException e) {
+                        System.out.println("Connection lost: " + e.getMessage());
+                    }
+                }).start();
+            }
+        } catch (IOException e) {
+            System.out.println("Server error: " + e.getMessage());
+        }
+    }
+}
