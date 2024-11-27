@@ -10,35 +10,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93906928-6015-4a61-9b95-5164d5df926e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/LibraryManagementS_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibraryManagementS.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manifest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lms_books/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lms_books/Client" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lms_books/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lms_books/DBHelper" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lms_books/DBHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lms_books/Library.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lms_books/LibraryApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lms_books/LibraryManagement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lms_books/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lms_books/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lms_books/Server" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lms_books/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/LibraryManagementS_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/LibraryManagementS_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manifest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/manifest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lms_books/MANIFEST.MF" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/exportToHTML" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -69,21 +53,23 @@
     "Application.LibraryManagement.executor": "Run",
     "Application.LibraryManagementS.executor": "Run",
     "Application.Main.executor": "Run",
+    "JAR Application.Jar.executor": "Profiler#1",
+    "JAR Application.Unnamed.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Program Files/Java/jdk-1.8/lib",
+    "last_opened_file_path": "C:/Users/Luz JimenezC/.jdks/corretto-1.8.0_432",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "C:/Users/Luz JimenezC/IdeaProjects/LibraryManagementS/src/Main.java",
-    "project.structure.last.edited": "SDKs",
+    "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propCompiler",
+    "settings.editor.selected.configurable": "preferences.JavaFX",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -92,9 +78,9 @@
       <recent name="lms_books" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JAR Application.Jar">
     <configuration name="LibraryManagementS" type="Application" factoryName="Application" editBeforeRun="true" activateToolWindowBeforeRun="false">
-      <option name="ALTERNATIVE_JRE_PATH" value="corretto-11" />
+      <option name="ALTERNATIVE_JRE_PATH" value="corretto-" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="lms_books.LibraryApp " />
       <module name="LibraryManagementS" />
@@ -102,6 +88,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Unnamed" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" nameIsGenerated="true" environment="&lt;No Environment&gt;" path="">
+      <method v="2" />
+    </configuration>
+    <configuration name="Jar" type="JarApplication">
+      <option name="JAR_PATH" value="$USER_HOME$/.jdks/corretto-1.8.0_432/lib/dt.jar" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\Luz JimenezC\IdeaProjects\LibraryManagementS" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.LibraryManagementS" />
+      <item itemvalue="HTTP Request.Unnamed" />
+      <item itemvalue="JAR Application.Jar" />
+    </list>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -121,7 +121,7 @@
       <updated>1732504443004</updated>
       <workItem from="1732504444722" duration="25650000" />
       <workItem from="1732677652910" duration="2106000" />
-      <workItem from="1732680467323" duration="8579000" />
+      <workItem from="1732680467323" duration="17212000" />
     </task>
     <servers />
   </component>
@@ -153,5 +153,9 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="LibraryManagementS:jar">
+  <artifact type="jar" build-on-make="true" name="LibraryManagementS:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/LibraryManagementS_jar</output-path>
     <root id="archive" name="LibraryManagementS.jar">
       <element id="module-output" name="LibraryManagementS" />
@@ -10,6 +10,7 @@
       <element id="extracted-dir" path="$PROJECT_DIR$/../../../../Program Files/Java/jdk-1.8/lib/packager.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/../../../../Program Files/Java/jdk-1.8/lib/javafx-mx.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/../../../../Program Files/Java/jdk-1.8/lib/ant-javafx.jar" path-in-jar="/" />
+      <element id="library" level="project" name="lib" />
     </root>
   </artifact>
 </component>
