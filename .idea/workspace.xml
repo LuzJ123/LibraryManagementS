@@ -9,13 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93906928-6015-4a61-9b95-5164d5df926e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/LibraryManagementS_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/LibraryManagementS_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manifest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/manifest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lms_books/MANIFEST.MF" beforeDir="false" />
-    </list>
+    <list default="true" id="93906928-6015-4a61-9b95-5164d5df926e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -121,7 +115,7 @@
       <updated>1732504443004</updated>
       <workItem from="1732504444722" duration="25650000" />
       <workItem from="1732677652910" duration="2106000" />
-      <workItem from="1732680467323" duration="17212000" />
+      <workItem from="1732680467323" duration="17581000" />
     </task>
     <servers />
   </component>
