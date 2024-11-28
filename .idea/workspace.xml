@@ -9,14 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93906928-6015-4a61-9b95-5164d5df926e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manifest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/manifest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lms_books/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lms_books/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lms_books/LibraryManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lms_books/LibraryManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lms_books/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lms_books/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lms_books/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lms_books/Server.java" afterDir="false" />
-    </list>
+    <list default="true" id="93906928-6015-4a61-9b95-5164d5df926e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -122,7 +115,7 @@
       <updated>1732504443004</updated>
       <workItem from="1732504444722" duration="25650000" />
       <workItem from="1732677652910" duration="2106000" />
-      <workItem from="1732680467323" duration="21422000" />
+      <workItem from="1732680467323" duration="21724000" />
     </task>
     <servers />
   </component>
@@ -139,17 +132,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/lms_books/DBHelper.java</url>
-          <line>79</line>
+          <line>80</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/lms_books/Library.java</url>
-          <line>12</line>
+          <line>13</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/lms_books/LibraryApp.java</url>
-          <line>8</line>
+          <line>10</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
