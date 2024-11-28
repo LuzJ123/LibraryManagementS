@@ -12,6 +12,8 @@ import java.util.Scanner;
  */
 public class LibraryManagement {
     git add .
+    git commit -m "Initial commit with all project files"
+
 
     private ArrayList<Book> books; // A list to store books
 

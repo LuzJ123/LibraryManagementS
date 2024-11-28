@@ -1,6 +1,8 @@
 import java.io.*;
 import java.net.*;
 git add .
+git commit -m "Initial commit with all project files"
+
 
 public class PrimeServer {
     public static void main(String[] args) {

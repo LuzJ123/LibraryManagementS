@@ -2,6 +2,8 @@ package lms_books;
 
 import java.util.Scanner;
 git add .
+git commit -m "Initial commit with all project files"
+
 
 public class Main {
 

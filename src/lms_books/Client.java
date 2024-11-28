@@ -2,6 +2,8 @@ import java.io.*;
 import java.net.*;
 import java.util.Scanner;
 git add .
+git commit -m "Initial commit with all project files"
+
 
 public class PrimeClient {
     public static void main(String[] args) {

@@ -5,6 +5,7 @@ import java.util.Scanner;  // Importing Scanner class
 import lms_books.Library;  // Importing Library class (if in the same package, this is optional)
 import lms_books.Book;     // Importing Book class (if in the same package, this is optional)
 git add .
+git commit -m "Initial commit with all project files"
 
 public class LibraryApp {
     public static void main(String[] args) {
