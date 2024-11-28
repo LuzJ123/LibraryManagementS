@@ -9,7 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93906928-6015-4a61-9b95-5164d5df926e" name="Changes" comment="" />
+    <list default="true" id="93906928-6015-4a61-9b95-5164d5df926e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manifest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/manifest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lms_books/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lms_books/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lms_books/LibraryManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lms_books/LibraryManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lms_books/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lms_books/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lms_books/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lms_books/Server.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,7 +58,7 @@
     "JAR Application.Unnamed.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Luz JimenezC/.jdks/corretto-1.8.0_432",
     "node.js.detected.package.eslint": "true",
@@ -115,7 +122,7 @@
       <updated>1732504443004</updated>
       <workItem from="1732504444722" duration="25650000" />
       <workItem from="1732677652910" duration="2106000" />
-      <workItem from="1732680467323" duration="17581000" />
+      <workItem from="1732680467323" duration="21422000" />
     </task>
     <servers />
   </component>
@@ -127,7 +134,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/lms_books/Main.java</url>
-          <line>11</line>
+          <line>12</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

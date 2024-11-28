@@ -11,6 +11,7 @@ import java.util.Scanner;
  * This class manages the library system, including adding, removing, checking in/out, and displaying books.
  */
 public class LibraryManagement {
+    git add .
 
     private ArrayList<Book> books; // A list to store books
 
