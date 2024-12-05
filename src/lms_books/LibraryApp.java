@@ -1,79 +1,82 @@
 package lms_books;
 
-
-import java.util.Scanner;  // Importing Scanner class
-import lms_books.Library;  // Importing Library class (if in the same package, this is optional)
-import lms_books.Book;     // Importing Book class (if in the same package, this is optional)
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 git add .
 git commit -m "Initial commit with all project files"
 
-public class LibraryApp {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        Library library = new Library();
-        int choice;
 
-        do {
-            System.out.println("\nLibrary Management System");
-            System.out.println("1. Add a book");
-            System.out.println("2. Remove a book");
-            System.out.println("3. Display all books");
-            System.out.println("4. Check out a book");
-            System.out.println("5. Check in a book");
-            System.out.println("6. Exit");
-            System.out.print("Enter your choice: ");
-            choice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+public class DBHelper {
 
-            switch (choice) {
-                case 1 -> {
-                    System.out.print("Enter book title: ");
-                    String title = scanner.nextLine();
-                    System.out.print("Enter book author: ");
-                    String author = scanner.nextLine();
-                    System.out.print("Enter book genre: ");
-                    String genre = scanner.nextLine();
-                    System.out.print("Enter book status (Available/Checked Out): ");
-                    String status = scanner.nextLine();
+    private static final String URL = "jdbc:sqlite:lms_books.db";
 
-                    Book book = new Book(title, author, genre, status);
-                    library.addBook(book);
-                }
+    public static Connection connect() {
+        Connection conn = null;
+        try {
+            conn = DriverManager.getConnection(URL);
+            System.out.println("Connected to SQLite database.");
+        } catch (SQLException e) {
+            System.err.println("Connection failed: " + e.getMessage());
+        }
+        return conn;
+    }
 
-                case 2 -> {
-                    System.out.print("Enter book title to remove: ");
-                    String title = scanner.nextLine();
-                    library.removeBook(title);
-                }
+    public static void createTable() {
+        String sql = """
+                CREATE TABLE IF NOT EXISTS books (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    title TEXT NOT NULL,
+                    author TEXT NOT NULL,
+                    genre TEXT NOT NULL,
+                    available BOOLEAN NOT NULL
+                );
+                """;
 
-                case 3 -> {
-                    library.displayBooks();
-                }
+        try (Connection conn = connect();
+             Statement stmt = conn.createStatement()) {
+            stmt.execute(sql);
+            System.out.println("Table 'books' created or already exists.");
+        } catch (SQLException e) {
+            System.err.println("Error creating table: " + e.getMessage());
+        }
+    }
 
-                case 4 -> {
-                    System.out.print("Enter book title to check out: ");
-                    String title = scanner.nextLine();
-                    library.checkOutBook(title);
-                }
+    public static void addBook(String title, String author, String genre) {
+        String sql = "INSERT INTO books (title, author, genre, available) VALUES (?, ?, ?, ?)";
 
-                case 5 -> {
-                    System.out.print("Enter book title to check in: ");
-                    String title = scanner.nextLine();
-                    library.checkInBook(title);
-                }
+        try (Connection conn = connect();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, title);
+            pstmt.setString(2, author);
+            pstmt.setString(3, genre);
+            pstmt.setBoolean(4, true); // Default availability
+            pstmt.executeUpdate();
+            System.out.println("Book added: " + title);
+        } catch (SQLException e) {
+            System.err.println("Error adding book: " + e.getMessage());
+        }
+    }
 
-                case 6 -> {
-                    System.out.println("Exiting the Library Management System. Goodbye!");
-                }
+    public static void displayBooks() {
+        String sql = "SELECT * FROM books";
 
-                default -> {
-                    System.out.println("Invalid choice. Please try again.");
-                }
+        try (Connection conn = connect();
+             Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery(sql)) {
+            while (rs.next()) {
+                System.out.println("ID: " + rs.getInt("id")
+                        + ", Title: " + rs.getString("title")
+                        + ", Author: " + rs.getString("author")
+                        + ", Genre: " + rs.getString("genre")
+                        + ", Available: " + rs.getBoolean("available"));
             }
-        } while (choice != 6);
-
-
-        scanner.close();
+        } catch (SQLException e) {
+            System.err.println("Error displaying books: " + e.getMessage());
+        }
     }
 }
 

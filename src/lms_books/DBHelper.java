@@ -9,7 +9,6 @@ import java.sql.Statement;
 git add .
 git commit -m "Initial commit with all project files"
 
-
 public class DBHelper {
 
     private static final String URL = "jdbc:sqlite:lms_books.db";

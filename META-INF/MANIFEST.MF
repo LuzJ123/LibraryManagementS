@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Created-By: 1.8.0_431 (Oracle Corporation)
+Main-Class: lms_books.PrimeServer
+

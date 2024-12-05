@@ -10,7 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93906928-6015-4a61-9b95-5164d5df926e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lms_books/PrimeClient.jar.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lms_books/PrimeServer.jar.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lms_books/books.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibraryManagementS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LibraryManagementS.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manifest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/manifest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lms_books/LibraryApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lms_books/LibraryApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lms_books/LibraryManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lms_books/LibraryManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lms_books/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lms_books/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +33,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Kotlin Class" />
         <option value="Class" />
       </list>
     </option>
@@ -31,7 +42,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -49,7 +60,7 @@
     "Application.LibraryManagement.executor": "Run",
     "Application.LibraryManagementS.executor": "Run",
     "Application.Main.executor": "Run",
-    "JAR Application.Jar.executor": "Profiler#1",
+    "JAR Application.Jar.executor": "Run",
     "JAR Application.Unnamed.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -62,7 +73,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "C:/Users/Luz JimenezC/IdeaProjects/LibraryManagementS/src/Main.java",
-    "project.structure.last.edited": "Artifacts",
+    "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.JavaFX",
@@ -74,7 +85,20 @@
       <recent name="lms_books" />
     </key>
   </component>
-  <component name="RunManager" selected="JAR Application.Jar">
+  <component name="RunManager" selected="Application.LibraryManagement">
+    <configuration name="LibraryManagement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lms_books.LibraryManagement" />
+      <module name="LibraryManagementS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lms_books.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LibraryManagementS" type="Application" factoryName="Application" editBeforeRun="true" activateToolWindowBeforeRun="false">
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -95,9 +119,15 @@
     </configuration>
     <list>
       <item itemvalue="Application.LibraryManagementS" />
+      <item itemvalue="Application.LibraryManagement" />
       <item itemvalue="HTTP Request.Unnamed" />
       <item itemvalue="JAR Application.Jar" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.LibraryManagement" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -117,7 +147,10 @@
       <updated>1732504443004</updated>
       <workItem from="1732504444722" duration="25650000" />
       <workItem from="1732677652910" duration="2106000" />
-      <workItem from="1732680467323" duration="24027000" />
+      <workItem from="1732680467323" duration="25828000" />
+      <workItem from="1732850345347" duration="2490000" />
+      <workItem from="1733237606390" duration="10596000" />
+      <workItem from="1733406880726" duration="11491000" />
     </task>
     <servers />
   </component>
@@ -128,23 +161,18 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/lms_books/Main.java</url>
-          <line>12</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/lms_books/DBHelper.java</url>
-          <line>80</line>
+          <line>82</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/lms_books/Library.java</url>
-          <line>13</line>
+          <line>15</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/lms_books/LibraryApp.java</url>
-          <line>10</line>
+          <line>11</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>

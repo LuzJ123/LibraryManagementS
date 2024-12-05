@@ -6,14 +6,13 @@ import java.util.Scanner;
 /**
  * Author: Luz Jimenez
  * Course: Library Management System Project
- * Date: November 2024
+ * Date: 05 December 2024
  * Class: LibraryManagement
  * This class manages the library system, including adding, removing, checking in/out, and displaying books.
  */
 public class LibraryManagement {
     git add .
     git commit -m "Initial commit with all project files"
-
 
     private ArrayList<Book> books; // A list to store books
 

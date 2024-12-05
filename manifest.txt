@@ -4,3 +4,5 @@ Main-Class: lms_books.PrimeServer
 git add .
 git commit -m "Initial commit with all project files"
 
+Manifest-Version: 1.0
+Main-Class: Server
